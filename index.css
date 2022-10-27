@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "gilroy";
+  src: url("./gilroy/Gilroy-Medium.ttf"), url("./gilroy/Gilroy-Heavy.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "gilroy";
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+body :link {
+  color: black;
+}
+
+.header {
+  height: 15%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.header a {
+  text-decoration: none;
+  height: 1.8rem;
+}
+.header a:visited {
+  color: black;
+}
+.header a:hover {
+  background-color: antiquewhite;
+}
+
