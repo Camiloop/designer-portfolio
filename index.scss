@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'gilroy';
-  src: url('./gilroy/Gilroy-Medium.ttf'), url('./gilroy/Gilroy-Heavy.ttf');
+  src: url('./gilroy/Gilroy-Light.ttf'), url('./gilroy/Gilroy-Medium.ttf'), url('./gilroy/Gilroy-Heavy.ttf');
 }
 
 
@@ -8,12 +8,15 @@
   margin: 0;
   padding: 0;
   font-family: 'gilroy';
+  font-stretch: 1% 500%;
+  // border: 1px solid blue;
 }
 
 body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background-color: #acd3d5;
 
   :link {
     color: black;
@@ -21,7 +24,7 @@ body {
 }
 
 .header {
-  height: 15%;
+  height: 10%;
   max-width: 100%;
   display: flex;
   flex-direction: row-reverse;
@@ -30,6 +33,7 @@ body {
   padding: 1.5rem;
   gap: 2rem;
   font-size: 1.5rem;
+  font-weight: 600;
 
   a {
     text-decoration: none;
@@ -40,7 +44,74 @@ body {
       color: black;
     }
 
-    a:hover {
-      background-color: antiquewhite;
-    }
+    a::after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0px;
+      transition: width .5s ease, background-color .5s ease;
+      }
+
+    a:hover::after {
+      width: 100%;
+      background: rgb(41, 134, 171);
+    }  
 }
+
+.photo {
+  background-image: url('./images/foto-novia1.jpg');
+  background-position: 35% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 18%;
+  position: absolute;
+  height: 66%;
+  width: 35rem;
+  z-index: -1;
+  transition: all ease-in-out .5s;
+}
+
+.squares {
+  display: flex;
+  width: 90%;
+  height: 75%;
+  margin: auto;
+
+  .square-1 {
+    margin-top: 2%;
+    height: 94%;
+    width: 45%;
+    background-color: #ffcbce;
+    z-index: -2;
+  }
+
+  .square-2 {
+    margin-top: 6%;
+    height: 50%;
+    width: 50%;
+    background-color: #ebc489;
+    z-index: -2;
+  }
+
+  p {
+    font: sans-serif;
+    position: absolute;
+    margin-left: 41%;
+    margin-top: 27%;
+    font-size: 10rem;
+    font-weight: 500;
+    letter-spacing: .4rem;
+  }
+}
+
+.content {
+  position: absolute;
+  background-image: url(./images/fondo-espacial.png);
+  background-size: 100% 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+

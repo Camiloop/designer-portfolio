@@ -12,13 +12,14 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  position: absolute;
 }
 body :link {
   color: black;
 }
 
 .header {
-  height: 15%;
+  height: 10%;
   max-width: 100%;
   display: flex;
   flex-direction: row-reverse;
@@ -41,8 +42,17 @@ body :link {
 .header a:visited {
   color: black;
 }
-.header a:hover {
-  background-color: antiquewhite;
+.header a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.header a:hover::after {
+  width: 100%;
+  background: rgb(41, 134, 171);
 }
 
 .content {
@@ -51,10 +61,15 @@ body :link {
   margin: auto;
   display: flex;
   align-items: center;
+  gap: 4rem;
 }
 .content .content__img {
+  background-image: url("./images/foto-novia-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 35%;
   height: 100%;
+  z-index: -2;
 }
 .content .content__text {
   width: 65%;
@@ -62,11 +77,45 @@ body :link {
 }
 .content .content__text h2 {
   font-weight: 100;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
 }
 .content .content__text p {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin-top: 2.8rem;
+}
+.content a {
+  text-decoration: none;
+}
+.content .content__square {
+  display: flex;
+  height: 10%;
+  width: 60%;
+  background-color: #86c9cd;
+  margin-top: 2rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.7rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 10px;
+}
+.content .content__square:hover {
+  transform: scale(1.05);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-image: url("./images/fondo-espacial.png");
+  background-size: contain;
+  filter: drop-shadow(1px 1px 20px rgba(46, 111, 110, 0)) invert(20%);
+  z-index: -1;
 }
 
 /*# sourceMappingURL=about.css.map */
