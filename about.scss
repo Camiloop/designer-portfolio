@@ -15,7 +15,6 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  // background-color: black;
   position: absolute;
 
   :link {
@@ -132,6 +131,5 @@ body {
     background-image: url('./images/fondo-espacial.png');
     background-size: contain;
     filter: drop-shadow(1px 1px 20px rgba(46, 111, 110, 0)) invert(20%);
-    // filter: grayscale(80%);
     z-index: -1;
   }

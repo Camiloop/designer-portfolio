@@ -14,6 +14,7 @@ body {
   width: 100vw;
   overflow: hidden;
   background-color: #acd3d5;
+  position: absolute;
 }
 body :link {
   color: black;
@@ -30,6 +31,12 @@ body :link {
   gap: 2rem;
   font-size: 1.5rem;
   font-weight: 600;
+}
+.header .header__inicio {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4431372549);
+  height: 2rem;
+  width: 6rem;
 }
 .header a {
   text-decoration: none;
@@ -60,7 +67,7 @@ body :link {
   position: absolute;
   height: 66%;
   width: 35rem;
-  z-index: -1;
+  z-index: -2;
   transition: all ease-in-out 0.5s;
 }
 
@@ -75,14 +82,14 @@ body :link {
   height: 94%;
   width: 45%;
   background-color: #ffcbce;
-  z-index: -2;
+  z-index: -3;
 }
 .squares .square-2 {
   margin-top: 6%;
   height: 50%;
   width: 50%;
   background-color: #ebc489;
-  z-index: -2;
+  z-index: -3;
 }
 .squares p {
   font: sans-serif;
@@ -95,13 +102,22 @@ body :link {
 }
 
 .content {
-  position: absolute;
-  background-image: url(./images/fondo-espacial.png);
   background-size: 100% 110%;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-image: url("./images/fondo-espacial.png");
+  background-size: contain;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=index.css.map */
