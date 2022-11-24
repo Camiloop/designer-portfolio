@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'gilroy';
+  src: url('./gilroy/Gilroy-Regular.ttf'), url('./gilroy/Gilroy-Medium.ttf'),url('./gilroy/Gilroy-Thin.ttf'),;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'gilroy';
+  // outline: 1px solid blue;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  background-color: #ffcbce;
+
+  :link {
+    color: black;
+  }
+}
+
+.header {
+  height: 10%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  gap: 2rem;
+  font-size: 1.5rem;
+
+  .header__proyectos {
+    text-align: center;
+    background-color: #c6e7e8d0;
+    height: 2rem;
+    width: 8rem;
+  }
+
+  a {
+    text-decoration: none;
+    height: 1.8rem;
+  }
+
+    a:visited {
+      color: black;
+    }
+
+    a::after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0px;
+      transition: width .5s ease, background-color .5s ease;
+      }
+
+    a:hover::after {
+      width: 100%;
+      background: rgb(41, 134, 171);
+    }  
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-image: url('./images/fondo-espacial.png');
+  background-size: contain;
+  z-index: -1;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5rem;
+  gap: 2rem;
+  width: 70%;
+  height: 65%;
+  margin: auto;
+
+  a {
+    text-decoration: none;
+    height: 100%;
+  }
+
+  a:visited {
+    color: black;
+  }
+
+  .container__box {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .2s;
+
+    .container__img {
+      height: 70%;
+      width: 100%;
+      background-color: rgb(193, 193, 193);
+    }
+
+    .container__txt {
+      height: 30%;
+      width: 100%;
+      text-align: end;
+      font-size: 2rem;
+      font-weight: bold;
+      background-color: rgba(227, 223, 223, 0.814);
+    }
+  }
+
+  .container__box:hover {
+    transform: scale(1.05);
+  }
+}

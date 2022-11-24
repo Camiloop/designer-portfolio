@@ -86,9 +86,9 @@ body :link {
 }
 .squares .square-2 {
   margin-top: 6%;
-  height: 50%;
+  height: 60%;
   width: 50%;
-  background-color: #ebc489;
+  background-color: #d6d4d2;
   z-index: -3;
 }
 .squares p {
