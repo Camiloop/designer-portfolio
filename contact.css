@@ -82,4 +82,87 @@ body::before {
   transition: all ease-in-out 0.5s;
 }
 
+.title {
+  text-align: center;
+  width: 100%;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.container {
+  margin: auto;
+  width: 70%;
+  height: 60%;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(5px);
+}
+.container .container__form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  padding: 2rem;
+}
+.container .container__form input {
+  border: none;
+  padding: 3px;
+  background-color: #ffcbce;
+  width: 70%;
+  height: 1.5rem;
+  margin-left: 10%;
+  margin-bottom: 3rem;
+  margin-top: 0.5rem;
+}
+.container .container__form label {
+  margin-left: 10%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.container .container__form textarea {
+  background-color: #ffcbce;
+  margin-left: 10%;
+  border: none;
+  margin-top: 0.5rem;
+  width: 70%;
+  height: 35%;
+  resize: none;
+  letter-spacing: 0.1rem;
+}
+.container .container__form button {
+  border: none;
+  background-color: rgb(189, 193, 195);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  width: 10rem;
+  padding: 15px;
+  margin-left: 31%;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.container .container__form button:hover {
+  background-color: rgb(41, 134, 171);
+  transform: scale(1.05);
+  box-shadow: 1px 1px 3px 3px rgba(143, 142, 142, 0.226);
+}
+.container .container__content {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container .container__content img {
+  width: 50%;
+  margin-top: 3rem;
+  margin-right: 20%;
+}
+.container .container__content h2 {
+  margin-right: 15%;
+  width: 100%;
+}
+
 /*# sourceMappingURL=contact.css.map */

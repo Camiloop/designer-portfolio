@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,57 @@
   <title>Laura Avila</title>
   <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
 
   <header class="header">
-    <a href="./index.html"><div class="header__contacto">Contacto</div></a>
-    <a href="./about.html"><div class="header__sobre">Sobre mi</div></a>
-    <a href="./projects.html"><div class="header__proyectos">Proyectos</div></a>
-    <a href="./index.html"><div class="header__inicio">Inicio</div></a>
-</header>
+    <a href="./index.html">
+      <div class="header__contacto">Contacto</div>
+    </a>
+    <a href="./about.html">
+      <div class="header__sobre">Sobre mi</div>
+    </a>
+    <a href="./projects.html">
+      <div class="header__proyectos">Proyectos</div>
+    </a>
+    <a href="./index.html">
+      <div class="header__inicio">Inicio</div>
+    </a>
+  </header>
+
+  <section class="title">
+    <h1>Contacto</h1>
+  </section>
+
+  <section class="container">
+    <form action="" class="container__form">
+      <label for="">Nombre:</label>
+      <input type="text" required >
+      <label for="">Correo:</label>
+      <input type="email" required>
+      <label for="">Mensaje:</label>
+      <textarea form="container__form" maxlength="500" cols="2" required></textarea>
+      <button type="submit">
+        Enviar <svg stroke="#FFFFFF" fill="#FFFFFF" stroke-width="0" viewBox="-2 -5 24 24" height="1em" width="1em"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill="none" stroke="#FFFFFF" stroke-width="2"
+            d="M22,3 L2,11 L20.5,19 L22,3 Z M10,20.5 L13,16 M15.5,9.5 L9,14 L9.85884537,20.0119176 C9.93680292,20.5576204 10.0751625,20.5490248 10.1651297,20.009222 L11,15 L15.5,9.5 Z">
+          </path>
+        </svg></button>
+    </form>
+
+    <div class="container__content">
+      <h2>
+        ¿Tienes preguntas, propuestas de proyectos o sugerencias?
+        Llena el formulario y mi asistente los atenderá
+      </h2>
+      <img src="./images/Gatitu.png" alt="gatitu">
+    </div>
+
+  </section>
 
 
-  
+
 </body>
+
 </html>
